@@ -24,6 +24,7 @@ class _HomePageState extends State<HomePage> {
   List<String> categories = [];
 
   _HomePageState() {
+    //
     final http = DioService('https://fakestoreapi.com');
     final repo = ProductRepository(http);
     service = ProductService(repo);
