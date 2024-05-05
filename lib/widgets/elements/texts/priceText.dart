@@ -10,6 +10,7 @@ class PriceText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       price,
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
         color: color ?? Colors.white,
         fontSize: 16,
