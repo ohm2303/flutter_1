@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_compose/di/get_it.dart';
 import 'package:widget_compose/mocks/products.dart';
 import 'package:widget_compose/network/http/dio_service.dart';
 import 'package:widget_compose/port/product.dart';
@@ -18,17 +19,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late final IProductService service;
+  late final IProductService service = getIt.get<IProductService>();
 
   List<List<ProductToDisplay>> products = [];
   List<String> categories = [];
 
   _HomePageState() {
-    //
-    final http = DioService('https://fakestoreapi.com');
-    final repo = ProductRepository(http);
-    service = ProductService(repo);
-
     getProducts();
   }
 

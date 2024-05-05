@@ -1,10 +1,10 @@
 import 'package:widget_compose/port/product.dart';
 
+import '../di/get_it.dart';
 import '../entitys/product.dart';
 
 class ProductService extends IProductService {
-  final IProductRepository repository;
-  ProductService(this.repository);
+  final IProductRepository repository = getIt.get<IProductRepository>();
 
   @override
   Future<List<ProductToDisplay>> getByCategory(String category) async {
