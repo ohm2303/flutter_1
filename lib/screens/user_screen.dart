@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class UserPageScreen extends StatefulWidget {
-  const UserPageScreen({Key? key}) : super(key: key);
+  const UserPageScreen({super.key});
 
   @override
   State<UserPageScreen> createState() => _UserPageScreenState();
