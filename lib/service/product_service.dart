@@ -9,12 +9,20 @@ class ProductService extends IProductService {
   @override
   Future<List<ProductToDisplay>> getByCategory(String category) async {
     final rawProducts = await repository.getByCategory(category);
-    return rawProducts.map((product) => ProductToDisplay(id: product.id.toString(), category: product.category!, name: product.title!, imageUrl: product.image!, price: product.price!.toDouble())).toList();
+    return rawProducts
+        .map((product) => ProductToDisplay(
+            id: product.id.toString(),
+            category: product.category!,
+            name: product.title!,
+            imageUrl: product.image!,
+            price: product.price!.toDouble(),
+            description: product.description,
+            rating: product.rating?.rate))
+        .toList();
   }
 
   @override
-  Future<List<String>> getCategories() async{
+  Future<List<String>> getCategories() async {
     return await repository.getCategories();
   }
-
 }

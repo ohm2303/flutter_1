@@ -22,6 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late final IProductService service = getIt.get<IProductService>();
   bool isLoading = false;
+  int currentPageIndex = 0;
 
   List<List<ProductToDisplay>> products = [];
   List<String> categories = [];
@@ -48,8 +49,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void onSelectProduct(ProductToDisplay product) {
-    context.go("/detail");
-    print(product.name);
+    context.go("/detail", extra: product);
   }
 
   @override
@@ -86,6 +86,27 @@ class _HomePageState extends State<HomePage> {
                       ))
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: currentPageIndex,
+        onTap: (int index) {
+          setState(() {
+            currentPageIndex = index;
+            if (index == 1) {
+              context.go('/user');
+            }
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home Page',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.supervised_user_circle),
+            label: 'User Page',
+          ),
+        ],
       ),
     );
   }

@@ -5,5 +5,6 @@ class ProductToDisplay {
   final double price;
   final String category;
   final String? description;
-  ProductToDisplay({required this.id,required this.price,required this.imageUrl,required this.name,this.description,required this.category});
+  final num? rating;
+  ProductToDisplay({required this.id,required this.price,required this.imageUrl,required this.name,this.description,required this.category,this.rating});
 }
