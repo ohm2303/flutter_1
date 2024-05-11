@@ -22,7 +22,7 @@ class _UserPageScreenState extends State<UserPageScreen> {
             const CircleAvatar(
               radius: 50,
               backgroundImage: NetworkImage(
-                  'https://example.com/user_profile_image.jpg'),
+                  'https://www.google.com/imgres?q=doraemon&imgurl=https%3A%2F%2Fvariety.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fdoraemon2.jpg%3Fcrop%3D0px%252C193px%252C1593px%252C887px%26resize%3D1000%252C563&imgrefurl=https%3A%2F%2Fvariety.com%2F2014%2Ftv%2Fasia%2Ficonic-japanese-cartoon-doraemon-acquired-by-disney-1201176265%2F&docid=Rp8scMCoK4uAzM&tbnid=9Nw1Kx64B07ZAM&vet=12ahUKEwiY37KWmYWGAxW3z6ACHQ9TBasQM3oECBUQAA..i&w=1000&h=563&hcb=2&ved=2ahUKEwiY37KWmYWGAxW3z6ACHQ9TBasQM3oECBUQAA'),
             ),
             const SizedBox(height: 20),
             Text(
