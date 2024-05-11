@@ -44,11 +44,6 @@ class _UserPageScreenState extends State<UserPageScreen> {
                   'and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
               color: Colors.black54,
             ),
-            SizedBox(height: 10),
-            Text(
-              'รายละเอียดเพิ่มเติมเกี่ยวกับผู้ใช้',
-              style: TextStyle(fontSize: 16),
-            ),
           ],
         ),
       ),
