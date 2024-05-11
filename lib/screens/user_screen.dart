@@ -22,7 +22,7 @@ class _UserPageScreenState extends State<UserPageScreen> {
             const CircleAvatar(
               radius: 50,
               backgroundImage: NetworkImage(
-                  'https://example.com/user_profile_image.jpg'), // เปลี่ยน URL เป็นลิงก์รูปภาพของผู้ใช้จริง
+                  'https://example.com/user_profile_image.jpg'),
             ),
             const SizedBox(height: 20),
             Text(
@@ -32,7 +32,7 @@ class _UserPageScreenState extends State<UserPageScreen> {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                // ใส่โค้ดสำหรับการดำเนินการต่างๆ เมื่อกดปุ่ม
+                // todo something
               },
               child: const Text('แก้ไขโปรไฟล์'),
             ),
